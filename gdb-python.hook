@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+# gdb looks for its Python module relative to its own data directory, and
+# quick-sharun moves gdb out of /usr/bin, so the search fails and gdb falls
+# back to a crippled interpreter ("Limited Python support is available").
+# Point it at the copy we ship instead.
+GDB_PYTHONPATH="${APPDIR}/share/gdb/python"
+if [ -d "$GDB_PYTHONPATH" ]; then
+	PYTHONPATH="${GDB_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
+	export PYTHONPATH
+fi

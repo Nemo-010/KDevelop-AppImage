@@ -72,6 +72,11 @@ quick-sharun \
   /usr/share/org.kde.syntax-highlighting \
   /usr/share/qt6/resources
 
+# gdb's own hook, kept out of ADD_HOOKS since that is for quick-sharun's
+# bundled hooks only
+mkdir -p ./AppDir/bin
+cp ./gdb-python.hook ./AppDir/bin
+
 mkdir -p ./AppDir/share/applications
 cp /usr/share/applications/org.kde.kate.desktop    ./AppDir/share/applications
 cp /usr/share/applications/org.kde.konsole.desktop ./AppDir/share/applications
