@@ -19,6 +19,7 @@ pacman -Syu --noconfirm \
     qt6-5compat       \
     syntax-highlighting \
     breeze            \
+    breeze-icons      \
     qt6ct             \
     kvantum           \
     lxqt-qtplugin     \

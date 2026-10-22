@@ -65,6 +65,8 @@ quick-sharun \
   /usr/share/kateproject \
   /usr/share/katexmltools \
   /usr/share/color-schemes \
+  /usr/share/icons/breeze \
+  /usr/share/icons/breeze-dark \
   /usr/share/kstyle \
   /usr/share/kglobalaccel \
   /usr/share/org.kde.syntax-highlighting \
