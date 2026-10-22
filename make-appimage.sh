@@ -79,8 +79,11 @@ quick-sharun \
 # quick-sharun auto-deploys the whole Qt qml dir, which drags in the
 # QtQuick3D/SpatialAudio module that comes with qt6-multimedia. Nothing in
 # KDevelop imports QtQuick3D, and the plugin's library is not bundled
-# either, so the module can never load: drop it.
-rm -rf ./AppDir/lib/qt6/qml/QtQuick3D
+# either, so the module can never load: drop it, along with the two
+# SpatialAudio libs that only that module pulled in.
+rm -rf ./AppDir/lib/qt6/qml/QtQuick3D \
+       ./AppDir/lib/libQt6Quick3DSpatialAudio.so* \
+       ./AppDir/lib/libQt6SpatialAudio.so*
 
 # gdb's own hook, kept out of ADD_HOOKS since that is for quick-sharun's
 # bundled hooks only
