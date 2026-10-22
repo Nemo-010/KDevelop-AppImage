@@ -44,6 +44,7 @@ too. Everything below is shipped inside the AppImage and found on `PATH`:
 | `cppcheck` | cppcheck analyzer plugin |
 | `astyle` | source formatter plugin |
 | `gdb` | GNU debugger plugin |
+| `lldb`, `lldb-mi`, `lldb-server` | LLDB debugger plugin |
 | `heaptrack` | memory profiler plugin |
 | `cmake`, `ctest`, `ninja`, `make` | CMake / Makefile / Ninja project managers and build plugins |
 | `git` | Git VCS plugin |

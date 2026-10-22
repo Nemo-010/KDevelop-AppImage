@@ -24,6 +24,8 @@ pacman -Syu --noconfirm \
     kvantum           \
     lxqt-qtplugin     \
     gdb               \
+    lldb              \
+    lldb-mi           \
     clang             \
     clang-libs        \
     python            \

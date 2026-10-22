@@ -22,6 +22,10 @@ quick-sharun \
   /usr/bin/kate \
   /usr/bin/konsole \
   /usr/bin/gdb \
+  /usr/bin/lldb \
+  /usr/bin/lldb-server \
+  /usr/bin/lldb-mi \
+  /usr/lib/liblldb.so* \
   /usr/bin/git \
   /usr/bin/cmake \
   /usr/bin/ctest \
@@ -71,6 +75,12 @@ quick-sharun \
   /usr/share/kglobalaccel \
   /usr/share/org.kde.syntax-highlighting \
   /usr/share/qt6/resources
+
+# quick-sharun auto-deploys the whole Qt qml dir, which drags in the
+# QtQuick3D/SpatialAudio module that comes with qt6-multimedia. Nothing in
+# KDevelop imports QtQuick3D, and the plugin's library is not bundled
+# either, so the module can never load: drop it.
+rm -rf ./AppDir/lib/qt6/qml/QtQuick3D
 
 # gdb's own hook, kept out of ADD_HOOKS since that is for quick-sharun's
 # bundled hooks only
